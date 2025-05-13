@@ -1,4 +1,12 @@
 export default function Main() {
+    const ingredients =["chicken", "apple", "tomatos"]
+
+    const showlist = ingredients.map(item=>(
+
+       <li key={item}>{item}</li>
+    )
+
+    )
   return (
     <>
       <main>
@@ -10,6 +18,9 @@ export default function Main() {
           />
           <button>Add ingredient</button>
         </form>
+        <ul>
+            {showlist}
+        </ul>
       </main>
     </>
   );

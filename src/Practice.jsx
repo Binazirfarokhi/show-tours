@@ -9,12 +9,24 @@ export default function Practice() {
      * Don't forget to replace the hard-coded "0" with your new state
      */
 const [count, setCount] = React.useState(0)
-
+  /**
+     * Note: if you ever need the old value of state
+     * to help you determine the new value of state,
+     * you should pass a callback function to your
+     * state setter function instead of using
+     * state directly. This callback function will
+     * receive the old value of state as its parameter,
+     * which you can then use to determine your new
+     * value of state.
+     */
+// function decrement(){
+//     setCount(count - 1)
+// } if you wany
 function decrement(){
-    setCount(count - 1)
+    setCount(preCount=>preCount+1)
 }
 function increment(){
-    setCount(count + 1)
+    setCount(preCount=>preCount+1)
 }
 
     return (
